@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 result  = 2 * Math.PI * num1 * (num1 + ((num2 * num2) / (Math.sqrt((num1 * num1) - (num2 * num2)))) * asinh((Math.sqrt((num1 * num1) - (num2 * num2))) / num2));
             }
 
-            resultView.setText("Surface of the Ellipsoid = "+result);
+            resultView.setText("Surface = "+result);
         } catch (NumberFormatException e) {
 
             resultView.setText("WRONG INPUT!!");
@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public void showAbout(View view) {
         Intent intent = new Intent(this, DisplayAboutActivity.class);
         String message = resultView.getText().toString();
+        System.out.println("I'm here");
         intent.putExtra("result",message);
         startActivity(intent);
     }

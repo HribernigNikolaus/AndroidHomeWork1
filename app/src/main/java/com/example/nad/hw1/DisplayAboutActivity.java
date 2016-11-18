@@ -17,6 +17,6 @@ public class DisplayAboutActivity extends AppCompatActivity {
         String message = intent.getStringExtra("result");
         TextView textView = (TextView) findViewById(R.id.textViewAbout);
 
-        textView.setText("Surface of the Ellipsoid = "+ message);
+        textView.setText(message);
     }
 }
